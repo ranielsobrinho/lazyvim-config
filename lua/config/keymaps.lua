@@ -32,6 +32,9 @@ keymap.set("n", "<S-d>", ":bd<Return>", opts)
 -- ToggleTerm
 keymap.set("n", "<C-t>", ":ToggleTerm<Return>", opts)
 
+-- Gitsigns Blame
+keymap.set("n", "<leader>gl", ":Gitsigns blame_line<Return>", { silent = true, noremap = true, desc = "Blame line" })
+
 -- Show dependency versions
 keymap.set(
   "n",
@@ -57,7 +60,7 @@ keymap.set(
 )
 
 -- Update dependency on the line
-keymap.keymap.set(
+keymap.set(
   "n",
   "<leader>nu",
   require("package-info").update,
@@ -65,7 +68,7 @@ keymap.keymap.set(
 )
 
 -- Delete dependency on the line
-keymap.keymap.set(
+keymap.set(
   "n",
   "<leader>nd",
   require("package-info").delete,
@@ -73,7 +76,7 @@ keymap.keymap.set(
 )
 
 -- Install a new dependency
-keymap.keymap.set(
+keymap.set(
   "n",
   "<leader>ni",
   require("package-info").install,
@@ -81,7 +84,7 @@ keymap.keymap.set(
 )
 
 -- Install a different dependency version
-keymap.keymap.set(
+keymap.set(
   "n",
   "<leader>np",
   require("package-info").change_version,
