@@ -17,7 +17,8 @@ require("lazy").setup({
         -- colorscheme = "duskfox",
         -- colorscheme = "catppuccin-mocha",
         -- colorscheme = "onedark",
-        colorscheme = "nightfox",
+        -- colorscheme = "nightfox",
+        colorscheme = "dracula",
       },
     },
     -- import any extras modules here
