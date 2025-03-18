@@ -15,10 +15,10 @@ require("lazy").setup({
       import = "lazyvim.plugins",
       opts = {
         -- colorscheme = "duskfox",
-        -- colorscheme = "catppuccin-mocha",
+        colorscheme = "catppuccin-mocha",
         -- colorscheme = "onedark",
         -- colorscheme = "nightfox",
-        colorscheme = "dracula",
+        -- colorscheme = "dracula",
       },
     },
     -- import any extras modules here
