@@ -64,6 +64,9 @@ return {
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
+        file_ignore_patterns = {
+          "node_modules",
+        },
       },
     },
   },
@@ -77,6 +80,13 @@ return {
       config = function()
         require("telescope").load_extension("fzf")
       end,
+    },
+    opts = {
+      defaults = {
+        file_ignore_patterns = {
+          "node_modules",
+        },
+      },
     },
   },
 
@@ -98,7 +108,6 @@ return {
       ---@type lspconfig.options
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
-        tsserver = {},
       },
       -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
@@ -192,6 +201,7 @@ return {
         "shfmt",
         "flake8",
         "typescript-language-server",
+        "tsserver",
         "gopls",
       },
     },
@@ -202,8 +212,25 @@ return {
       ensure_installed = {
         "js-debug-adapter",
         "node-debug2-adapter",
+        "go-debug-adapter",
       },
     },
+  },
+  {
+    "mason-org/mason-lspconfig.nvim",
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed = {
+          "stylua",
+          "shellcheck",
+          "shfmt",
+          "flake8",
+          "typescript-language-server",
+          "tsserver",
+          "gopls",
+        },
+      })
+    end,
   },
 
   -- Use <tab> for completion and snippets (supertab)
