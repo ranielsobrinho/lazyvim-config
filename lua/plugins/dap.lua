@@ -144,6 +144,14 @@ return {
         "Joakker/lua-json5",
         build = "./install.sh",
       },
+      {
+        "dreamsofcode-io/nvim-dap-go",
+        ft = "go",
+        dependencies = "mfussenegger/nvim-dap",
+        config = function(_, opts)
+          require("dap-go").setup(opts)
+        end,
+      },
     },
   },
 }

@@ -213,6 +213,7 @@ return {
         "js-debug-adapter",
         "node-debug2-adapter",
         "go-debug-adapter",
+        "delve",
       },
     },
   },
